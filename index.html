@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Intro component with sign up form</title>
+
+  
+</head>
+<body>
+  <main class="signup_page">
+    <section class="guidance_para">
+      <h1 class="heading">
+        Learn to code by watching others
+      </h1>
+      <p class="para">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable.
+      </p>
+    </section>
+    
+    <section class="signup_card">
+      <p class="subscription_info">
+        <span>
+          Try it free 7 days
+        </span>
+        then $20/mo. thereafter
+      </p>
+
+      <form action="get" class="signup_form">
+        <div class="input">
+          <input type="text" placeholder="First Name" id="first-name" onkeyup="checkFirstName(event)">
+          <img src="images/icon-error.svg" alt="" id="error-img-fn">
+        </div>
+        <p class="error-msg" id="error-msg-fn">First Name cannot be empty</p>
+        
+        
+        <div class="input">
+          <input type="text" placeholder="Last Name" id="last-name" onkeyup="checkLastName(event)">
+          <img src="images/icon-error.svg" alt="" id="error-img-ln" >
+        </div>
+        <p id="error-msg-ln" class="error-msg">Last Name cannot be empty</p>
+
+        <div class="input">
+          <input type="email" placeholder="Email" id="email" onkeyup="checkEmail(event)">
+          <img src="images/icon-error.svg" alt="" id="error-img-email">
+        </div>
+        <p id="error-msg-email" class="error-msg">looks like this is not a email</p>
+
+        <div class="input">
+          <input type="password" placeholder="Password" id="password" onkeyup="checkPassword(event)">
+            <img src="images/icon-error.svg" alt="" id="error-img-password">
+        </div>
+        <p  id="error-msg-password" class="error-msg">Password cannot be empty</p>
+
+        <button type="button" class="submit_btn">CLAIM YOUR FREE TRIAL</button>
+        <p class="terms">
+          By clicking the button, you are agreeing to our <span>Terms and Services</span>
+        </p>
+      </form>
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
